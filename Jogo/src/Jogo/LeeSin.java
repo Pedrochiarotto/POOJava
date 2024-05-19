@@ -2,7 +2,7 @@ package Jogo;
 
 public class LeeSin extends Personagem implements IHeroi {
 	private String passiva;
-	public LeeSin(String nome, int vida, int forca, int defesa,int velocidade, int magia, String passiva) {
+	public LeeSin(String nome, float vida, float forca, float defesa,float velocidade, float magia, String passiva) {
 		super(nome,180, 46,39, 10, 0);
 		this.setPassiva("Agitação");
 	}

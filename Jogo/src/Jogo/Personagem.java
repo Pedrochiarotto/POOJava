@@ -2,14 +2,14 @@ package Jogo;
 
 public abstract class Personagem {
     private final String nickname;
-    private final int vida;
-    private final int forca;
-    private final int defesa;
-    private final int velocidade;
-    private final int magia;
-    private int vidaAtual;
+    protected float vida;
+    protected float forca;
+    protected float defesa;
+    private final float velocidade;
+    private final float magia;
+    private float vidaAtual;
 
-    public Personagem(String nome,int vida, int forca, int defesa, int velocidade, int magia) {
+    public Personagem(String nome,float vida, float forca, float defesa, float velocidade, float magia) {
         this.nickname = nome;
         this.vida = vida;
         this.forca = forca;
@@ -19,35 +19,49 @@ public abstract class Personagem {
         this.vidaAtual = vida;
     }
 
-    public int getVidaAtual() {
-        return vidaAtual;
-    }
+	public float getVida() {
+		return vida;
+	}
 
-    public void setVidaAtual(int vidaAtual) {
-        this.vidaAtual = vidaAtual;
-    }
+	public void setVida(float vida) {
+		this.vida = vida;
+	}
 
-    public String getNickname() {
-        return nickname;
-    }
+	public float getForca() {
+		return forca;
+	}
 
-    public int getVida() {
-        return vida;
-    }
+	public void setForca(float forca) {
+		this.forca = forca;
+	}
 
-    public int getForca() {
-        return forca;
-    }
+	public float getDefesa() {
+		return defesa;
+	}
 
-    public int getDefesa() {
-        return defesa;
-    }
+	public void setDefesa(float defesa) {
+		this.defesa = defesa;
+	}
 
-    public int getVelocidade() {
-        return velocidade;
-    }
+	public float getVidaAtual() {
+		return vidaAtual;
+	}
 
-    public int getMagia() {
-        return magia;
-    }
+	public void setVidaAtual(float vidaAtual) {
+		this.vidaAtual = vidaAtual;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public float getVelocidade() {
+		return velocidade;
+	}
+
+	public float getMagia() {
+		return magia;
+	}
+
+   
 }
