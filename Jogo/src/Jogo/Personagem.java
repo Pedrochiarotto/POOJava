@@ -31,14 +31,6 @@ public abstract class Personagem {
         return nickname;
     }
 
-    public String getHabilidadeSecundaria() {
-        return habilidadeSecundaria;
-    }
-
-    public String getHabilidadePrincipal() {
-        return habilidadePrincipal;
-    }
-
     public int getVida() {
         return vida;
     }

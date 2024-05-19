@@ -2,7 +2,7 @@ package Jogo;
 
 public class Ashe extends Personagem implements IHeroi {
     public Ashe(String nickname) {
-        super(nickname, "Habilidade 1", "Habilidade 2", 10, 10, 10, 10, 10);
+        super(nickname, 10, 10, 10, 10, 10);
     }
 
 	@Override
