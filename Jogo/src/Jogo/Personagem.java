@@ -4,9 +4,10 @@ public abstract class Personagem {
     private final String nickname;
     protected float vida;
     protected float forca;
-    protected float defesa;
-    private final float velocidade;
-    private final float magia;
+	protected float defesa;
+    protected float velocidade;
+    protected float magia;
+	private Item itemAtual;
     private float vidaAtual;
 
     public Personagem(String nome,float vida, float forca, float defesa, float velocidade, float magia) {
@@ -18,6 +19,10 @@ public abstract class Personagem {
         this.magia = magia;
         this.vidaAtual = vida;
     }
+
+	public void comprarItem(Item item) {
+		this.itemAtual = item;
+	}
 
 	public float getVida() {
 		return vida;
@@ -59,9 +64,23 @@ public abstract class Personagem {
 		return velocidade;
 	}
 
+	public void setVelocidade(float velocidade) {
+		this.velocidade = velocidade;
+	}
+
 	public float getMagia() {
 		return magia;
 	}
 
-   
+	public void setMagia(float magia) {
+		this.magia = magia;
+	}
+
+	public Item getItemAtual() {
+		return itemAtual;
+	}
+
+	public void setItemAtual(Item itemAtual) {
+		this.itemAtual = itemAtual;
+	}
 }
