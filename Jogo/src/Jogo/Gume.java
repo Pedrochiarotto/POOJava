@@ -7,7 +7,9 @@ public class Gume extends Item {
 
     @Override
     public void ativarHabilidade() {
-        System.out.println("O item Gume do Infinito teve sua habilidade ativada!");
-        System.out.println("Estatísticas alteradas: \nForça aumentou + 20\nVelodicade aumentou + 10");
+        super.ativarHabilidade();
+        System.out.println("Estatísticas alteradas: \nForça aumentou + 200\nVelodicade aumentou + 100");
+        this.forca = this.forca + 200;
+        this.velocidade = this.velocidade + 100;
     }
 }

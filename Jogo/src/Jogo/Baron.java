@@ -1,18 +1,15 @@
 package Jogo;
 
-public class Baron extends Personagem implements IBoss{
+public class Baron extends TipoTanque implements IBoss{
 	public int invocar;
-	public Baron(String nome, float vida, float forca, float defesa, float velocidade, float magia,int invocar) {
-		super(nome,670,311,200,7,59);
+	
+	public Baron(int invocar) {
+		super("Baron", 700,400,400,100,400);
 		this.invocar = invocar;
 		
 	}
-	
-
-	
-    
 	public void HabilidadePrincipal() {
-		System.out.println("Baron utilizou Sua habilidade Desparo ácido");
+		System.out.println("Baron utilizou sua habilidade Desparo ácido");
 	}
 	
 	public void HabilidadeSecundaria() {
@@ -21,6 +18,7 @@ public class Baron extends Personagem implements IBoss{
 	
 	public void invocacao() {
 		System.out.println("Baron invocou " + invocar + " Súditos");
+		this.forca = 10 * invocar;
 	}
 
 	@Override

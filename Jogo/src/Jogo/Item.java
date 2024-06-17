@@ -1,6 +1,6 @@
 package Jogo;
 
-public abstract class Item {
+public class Item {
     private String nome;
     private double preco;
     protected double vida;
@@ -8,7 +8,17 @@ public abstract class Item {
     protected double defesa;
     protected double velocidade;
     protected double magia;
-
+    
+    public Item() {
+        this.nome = "Pedra do Personagem";
+        this.preco = 0;
+        this.vida = 1;
+        this.forca = 1;
+        this.defesa = 1;
+        this.velocidade = 1;
+        this.magia = 1;
+    }
+    
     public Item(String nome, double preco, double vida, double forca, double defesa, double velocidade, double magia) {
         this.nome = nome;
         this.preco = preco;
@@ -18,8 +28,10 @@ public abstract class Item {
         this.velocidade = velocidade;
         this.magia = magia;
     }
-
-    public abstract void ativarHabilidade();
+    
+    public void ativarHabilidade() {
+        System.out.println("O item " + this.nome + " ativou sua habilidade!");
+    };
 
     public String getNome() {
         return nome;

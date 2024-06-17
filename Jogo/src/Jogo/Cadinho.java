@@ -7,7 +7,9 @@ public class Cadinho extends Item {
 
     @Override
     public void ativarHabilidade() {
-        System.out.println("O item Gume do Infinito teve sua habilidade ativada!");
-        System.out.println("Estatísticas alteradas: \nDefesa aumentou + 35\nVelodicade aumentou + 5");
+        super.ativarHabilidade();
+        System.out.println("Estatísticas alteradas: \nDefesa aumentou + 150\nVelodicade aumentou + 100");
+        this.defesa = this.defesa + 150;
+        this.velocidade = this.velocidade + 100;
     }
 }

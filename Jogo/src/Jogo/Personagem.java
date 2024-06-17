@@ -1,23 +1,66 @@
 package Jogo;
 
 public abstract class Personagem {
-    private final String nickname;
-    protected float vida;
+    private String nickname;
+	private final String nomePersonagem;
+	protected float vida;
     protected float forca;
 	protected float defesa;
     protected float velocidade;
     protected float magia;
-	private Item itemAtual;
     private float vidaAtual;
+	private Item itemAtual;
+    private Roupa roupa;
 
-    public Personagem(String nome,float vida, float forca, float defesa, float velocidade, float magia) {
+
+	public Personagem(String nomePersonagem, float vida, float forca, float defesa, float velocidade, float magia) {
+		this.nomePersonagem = nomePersonagem;
+		this.vida = vida;
+		this.forca = forca;
+		this.defesa = defesa;
+		this.velocidade = velocidade;
+		this.magia = magia;
+		this.vidaAtual = vida;
+	}
+
+	public Personagem(String nome, String nomePersonagem, float vida, float forca, float defesa, float velocidade, float magia) {
+		this.nickname = nome;
+		this.nomePersonagem = nomePersonagem;
+		this.vida = vida;
+		this.forca = forca;
+		this.defesa = defesa;
+		this.velocidade = velocidade;
+		this.magia = magia;
+		this.vidaAtual = vida;
+	}
+
+    public Personagem(String nome, String nomePersonagem, float vida, float forca, float defesa, float velocidade, float magia, Item item) {
         this.nickname = nome;
+        this.nomePersonagem = nomePersonagem;
         this.vida = vida;
         this.forca = forca;
         this.defesa = defesa;
         this.velocidade = velocidade;
         this.magia = magia;
         this.vidaAtual = vida;
+        
+        this.itemAtual = item;
+        this.roupa = new Roupa();
+    }
+
+
+    public Personagem(String nome, String nomePersonagem, float vida, float forca, float defesa, float velocidade, float magia, Item item, String estilo, String cor) {
+        this.nickname = nome;
+        this.nomePersonagem = nomePersonagem;
+        this.vida = vida;
+        this.forca = forca;
+        this.defesa = defesa;
+        this.velocidade = velocidade;
+        this.magia = magia;
+        this.vidaAtual = vida;
+
+        this.itemAtual =item;
+        this.roupa = new Roupa(estilo,cor);
     }
 
 	public void comprarItem(Item item) {
@@ -82,5 +125,17 @@ public abstract class Personagem {
 
 	public void setItemAtual(Item itemAtual) {
 		this.itemAtual = itemAtual;
+	}
+
+	public String getNomePersonagem() {
+		return nomePersonagem;
+	}
+
+	public Roupa getRoupa() {
+		return roupa;
+	}
+
+	public void setRoupa(Roupa roupa) {
+		this.roupa = roupa;
 	}
 }
